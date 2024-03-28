@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="dto.User" table="user">
+		<id name="id" column="id"></id>
+		<property name="name"></property>
+		<property name="city"></property>
+		<property name="phoneNo"></property>
+		<property name="emailId"></property>
+		</class>
+</hibernate-mapping>
