@@ -1,9 +1,14 @@
 package dao;
 
+ 
+import java.util.Iterator;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import dto.User;
 
@@ -66,5 +71,17 @@ public class UserDao
 		{
 			System.out.println("User Does Not exist");
 		}
+	}
+	public void displayAll()
+	{
+		Session session=getSession();
+		Query<User>query=session.createQuery("SELECT U FROM User U");
+		List<User>users=query.getResultList();
+		Iterator<User>iterator=users.iterator();
+		while (iterator.hasNext()) 
+		{
+			iterator.next().display();
+			
+		}	
 	}
 }

@@ -45,5 +45,15 @@ public class User
 		return "User [id=" + id + ", name=" + name + ", city=" + city + ", phoneNo=" + phoneNo + ", emailId=" + emailId
 				+ "]";
 	}
+	public void display()
+	{
+		System.out.println("-----------------------------------------------------------------------------");
+		System.out.println("Name: "+name);
+		System.out.println("Id: "+id);
+		System.out.println("City: "+city);
+		System.out.println("Phone No: "+phoneNo);
+		System.out.println("Email Id: "+emailId);
+		System.out.println("---------------------------------------------------------------------------\n");
+	}
 	
 }

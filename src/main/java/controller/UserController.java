@@ -19,6 +19,7 @@ public class UserController
 			System.out.println("2.Update The User");
 			System.out.println("3.Delete The User");
 			System.out.println("4.Display The User");
+			System.out.println("5.Display All User");
 			int choice=Integer.parseInt(bufferedReader.readLine());
 			switch(choice)
 			{
@@ -77,8 +78,13 @@ public class UserController
 				new UserDao().displayUser(id);
 			}
 			break;
+			case 5:
+			{
+				new UserDao().displayAll();
+			}
+			break;
 			default:
-				System.out.println("Enter Choice Between 1-4");
+				System.out.println("Enter Choice Between 1-5");
 			}
 			
 		}
